@@ -50,12 +50,12 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | BSPC|  UP  | RET | DEL |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+// |  TAB | BSPC|  UP  | RET | DEL |     |   |     |     |     |  (  |  )  | BSPC |
 // | SHFT | LFT | DWN  | RGT |Home |PG_UP|   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | CTRL |     |      |     | END |PG_DN|   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                     | mo  |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp BSPC &kp UP   &kp RET   &kp DEL  &kp            &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+   &kp  TAB  &kp BSPC &kp UP   &kp RET   &kp DEL  &trans         &trans    &trans    &trans    &kp LPAR &kp RPAR &kp BSPC
    &kp LSHFT &kp LEFT &kp DOWN &kp RIGHT &kp HOME &kp PG_UP      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
    &kp LCTRL &trans   &trans   &trans    &kp END  &kp PG_DN      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                                &trans    &trans   &kp SPACE      &kp RET   &trans    &kp RALT
@@ -67,12 +67,12 @@
 // |  TAB |  F1  |  F2  |  F3  |  F4  |  F5  |   |  F6  |  F7  |  F8  |  F9  |  F10  |      |
 // |      |      |      |      |      |      |   |BT_CLR| BT_0 | BT_1 | BT_2 | BT_3  | BT_4 |
 // | CTRL |      |      |      |      |      |   |      |      |      |      |       |      |
-//                      |  GUI |      |  SPC |   | ENT  |      | ALT  |
+//                      |  mo  |  mo  |  SPC |   | ENT  |      | ALT  |
                         bindings = <
    &kp  TAB  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7  &kp F8 &kp F9 &kp F10 &trans
    &trans &trans &trans &trans &trans &trans      &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
    &kp LCTRL &trans &trans &trans   &trans      &trans &trans &trans  &trans  &trans &trans &trans
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                           &trans   &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
         };
